@@ -65,6 +65,9 @@ function Calc() {
 
     return (
         <div>
+            <div className={styles.find}>
+                Find
+            </div>
             <select className={styles.select} value={select} onChange={handleSelectChange}>
                 <option value='Asset' >Asset</option>
                 <option valiue='Liability'>Liability</option>
