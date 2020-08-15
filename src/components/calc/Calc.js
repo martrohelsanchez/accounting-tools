@@ -17,13 +17,13 @@ function Calc() {
 
         if (select === 'Liability') {
             const sagot = Number(e.target.value) - Number(asset);
-            const lagay = sagot === NaN ? sagot : 0;
+            const lagay = isNaN(sagot) ? sagot : 0;
             setLiab(lagay);
         }
 
         if (select === 'Capital') {
             const sagot = parseInt(e.target.value) - parseInt(asset);
-            const lagay = sagot === 'NaN' ? 0 : sagot;
+            const lagay = isNaN(sagot) ? 0 : sagot;
             setCap(lagay);
         }
     }
