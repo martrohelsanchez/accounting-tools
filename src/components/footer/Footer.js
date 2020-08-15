@@ -1,6 +1,5 @@
 import React from 'react';
 
-import styles from './footer.module.css';
 
 function Footer() {
     return (
@@ -29,7 +28,7 @@ function Footer() {
             <span>
                 Created by{' '}
             </span>
-            <a href='https://github.com/martrohelsanchez' target='_blank'>
+            <a href='https://github.com/martrohelsanchez' target='_blank' rel="noopener noreferrer">
                 Mart Rohel Sanchez
             </a>
         </div>
