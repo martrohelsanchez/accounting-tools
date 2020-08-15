@@ -1,0 +1,16 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    background-color: #31B9DD;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.appCont {
+    background-color: #31B9DD;
+    color: white;
+}
