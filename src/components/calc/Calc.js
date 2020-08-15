@@ -13,7 +13,11 @@ function Calc() {
     }
 
     function assetChange(e) {
-        setAsset(e.target.value === '' ? 0 : parseInt(e.target.value));
+        setAsset(e.target.value);
+
+        if (e.target.value === '') {
+            return null;
+        }
 
         if (select === 'Liability') {
             const sagot = Number(e.target.value) - Number(asset);
@@ -31,43 +35,59 @@ function Calc() {
     function liabChange(e) {
         setLiab(e.target.value === '' ? 0 : parseInt(e.target.value));
         if (select === 'Asset') {
-                setAsset(Number(e.target.value) + Number(cap));
+            const sagot = parseInt(e.target.value) + parseInt(cap);
+            const lagay = isNaN(sagot) ? 0 : sagot;
+            setAsset(lagay);
         }
 
         if (select === 'Capital') {
-                setCap( Number(asset) - Number(e.target.value));
+            const sagot = parseInt(asset) - parseInt(e.target.value);
+            const lagay = isNaN(sagot) ? 0 : sagot;
+            setCap(lagay);
         }
     }
 
     function capChange(e) {
         capChange(e.target.value === '' ? 0 : parseInt(e.target.value));
         if (select === 'Asset') {
-                setAsset(Number(e.target.value) + Number(liab));
+            const sagot = parseInt(e.target.value) + parseInt(liab);
+            const lagay = isNaN(sagot) ? 0 : sagot;
+            setAsset(lagay);
         }
 
         if (select === 'Liability') {
-                setLiab(Number(asset) - Number(e.target.value));
+            const sagot = parseInt(e.target.value) + parseInt(liab);
+            const lagay = isNaN(sagot) ? 0 : sagot;
+
+            setLiab(lagay);
         }
     }
 
     return (
         <div>
-            <select value={select} onChange={handleSelectChange}>
+            <select className={styles.select} value={select} onChange={handleSelectChange}>
                 <option value='Asset' >Asset</option>
                 <option valiue='Liability'>Liability</option>
                 <option value='Capital'>Capital</option>
             </select>
             <br/>
             <div className={styles.inputsCont}>
-                <input value={asset} className={styles.assetInput} onChange={assetChange} />
-                <span>
+                <p>Assets</p>
+                <input value={asset} className={`${styles.assetInput} ${styles.input}`} onChange={assetChange} />
+                <br />
+                <span className={styles.operator}>
                     =
                 </span>
-                <input value={liab} className={styles.liabInput} onChange={liabChange}/>
-                <span>
+                <br />
+                <p>Liabilities</p>
+                <input value={liab} className={`${styles.liabInput} ${styles.input}`} onChange={liabChange}/>
+                <br />
+                <span className={styles.operator}>
                     +
                 </span>
-                <input value={cap} className={styles.capInput} onChange={capChange}/>
+                <br />
+                <p>Capital</p>
+                <input value={cap} className={`${styles.capInput} ${styles.input}`} onChange={capChange}/>
             </div>
         </div>
     )

@@ -6,7 +6,15 @@ import Calc from '../calc/Calc';
 function Second() {
     return (
         <div className={styles.secondCont}>
-            <h5 className={styles.title} >The basic accounting equation</h5>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <p className={styles.title} >The basic accounting equation</p>
             <p>
                 The basic accounting equation is considered to be the foundation of the 
                 double-entry accounting system. The basic accounting equation shows 

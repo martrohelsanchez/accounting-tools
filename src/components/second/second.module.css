@@ -1,9 +1,13 @@
 .secondCont {
     width: 100vw;
     height: 100vh;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Roboto;
+    width: 50%;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .title {
     font-size: 2em;
+    margin-bottom: 5px;
 }

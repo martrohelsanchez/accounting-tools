@@ -8,8 +8,9 @@
 
 .titleCont {
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1em;
+    font-family: Roboto;
+    font-weight: lighter;
+    font-size: 3vw;
 }
 
 .title {

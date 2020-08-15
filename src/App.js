@@ -5,8 +5,6 @@ import First from './components/first/First';
 import Second from './components/second/Second';
 
 function App() {
-
-
     return (
         <div className={styles.appCont}>
             <First />

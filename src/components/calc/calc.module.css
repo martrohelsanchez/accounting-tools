@@ -1,0 +1,22 @@
+.input {
+    background-color: transparent;
+    border-width: 0 0 1px 0;
+    border-color: white;
+    margin: 10px;
+}
+
+.inputsCont {
+    margin: auto;
+    max-width: 200px;
+}
+
+.operator {
+    margin: auto;
+    text-align: center;
+    display: block;
+}
+
+.select {
+    margin: auto;
+    display: block;
+}
